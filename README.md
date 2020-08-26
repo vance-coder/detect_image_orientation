@@ -9,7 +9,7 @@ detect image orientation with CNN
 在我的训练集下训练好的model可以从这里下载（我的验证集下accuracy是95%）： https://www.yun.cn/s/4120dc888b5d454ba2197ec4705f04e7
 
 
-使用方式见demo notebook文件
+### 快速使用预训练模型（也可参考demo notebook文件）
 
 ```
 import numpy as np
@@ -39,8 +39,14 @@ for p in glob('./images/*.png'):
     predict(p)
 ```
 
+### 效果展示
+
 ![result1](./images/result/result1.png)
 
 ![result2](./images/result/result2.png)
 
 ![result3](./images/result/result3.png)
+
+
+### 训练自己的model
+因为我的数据集是针对发票，账单的文本数据，不能泛化到其他的场景，所以可以使用自己的训练集来进行训练，可以参考detect_orientation notebook文件
